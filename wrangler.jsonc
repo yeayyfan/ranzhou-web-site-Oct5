@@ -1,0 +1,37 @@
+{
+  // Cloudflare Workers 配置，放在 GitHub 仓库根目录（Worker 名称要和 Cloudflare 控制台一致）。
+  // 只把 site/ 文件夹发布成网站：仓库里的其他文件（隐藏的 .git、README.md、旧版网站文件）都不会上线。
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "rz",
+  // 让 iPhone / Safari 能播放视频的小程序（见 worker.js 开头的说明），只处理下面 run_worker_first 里的视频
+  "main": "worker.js",
+  "compatibility_date": "2026-06-06",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "./site",
+    "binding": "ASSETS",
+    // 找不到的页面显示本站的 404 页（site/404.html；英文页面用 site/en/404.html）
+    "not_found_handling": "404-page",
+    // 先经过 worker.js 的路径：网站里的全部视频。打包（npm run zip）时自动替换成实际的视频列表，不用手改
+    "run_worker_first": [
+      "/media/home/clip-reach.mp4",
+      "/media/home/clip-rib-crossing.mp4",
+      "/media/home/clip-spraying.mp4",
+      "/media/home/clip-telescopic-legs.mp4",
+      "/media/home/clip-traverse.mp4",
+      "/media/home/hero.mp4",
+      "/media/rz-radar/deploy.mp4",
+      "/media/rz-spider/climb.mp4",
+      "/media/rz-spider/exproof.mp4",
+      "/media/rz-spider/film.mp4",
+      "/media/rz-spider/manhole.mp4",
+      "/media/rz-spider/tools.mp4",
+      "/media/rz-titan/film.mp4"
+    ]
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ]
+}

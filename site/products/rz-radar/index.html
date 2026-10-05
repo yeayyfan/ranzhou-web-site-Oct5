@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="zh-CN" data-header-variant="overlay">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+
+<title>RZ Radar 舱内测绘导航站｜染舟</title>
+<meta name="description" content="RZ Radar：一人搬运进舱，三腿展开、升杆扫描，与船体 CAD 配准生成喷涂路径与导航地图；喷涂时作为 RZ Titan 与 RZ Spider 的定位基站（参数为设计目标）。">
+
+<link rel="alternate" hreflang="zh-CN" href="./"><link rel="alternate" hreflang="en" href="../../en/products/rz-radar/"><link rel="alternate" hreflang="x-default" href="./">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="染舟">
+<meta property="og:title" content="RZ Radar 舱内测绘导航站｜染舟">
+<meta property="og:description" content="RZ Radar：一人搬运进舱，三腿展开、升杆扫描，与船体 CAD 配准生成喷涂路径与导航地图；喷涂时作为 RZ Titan 与 RZ Spider 的定位基站（参数为设计目标）。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="../../media/brand/og-rz-radar.jpg"><meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0B0C0E">
+<meta name="format-detection" content="telephone=no">
+
+<link rel="icon" href="../../media/brand/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../../media/brand/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../../media/brand/apple-touch-icon.png">
+<link rel="manifest" href="../../site.webmanifest">
+<link rel="preload" href="../../fonts/inter-display-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+<style>@font-face{font-family:"RZ Display";src:url("../../fonts/inter-display-400.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"RZ Display";src:url("../../fonts/inter-display-500.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap}@font-face{font-family:"RZ Text";src:url("../../fonts/inter-400.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:"RZ Text";src:url("../../fonts/inter-500.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap}@font-face{font-family:"RZ Text";src:url("../../fonts/inter-600.woff2") format("woff2");font-weight:600;font-style:normal;font-display:swap}</style>
+<link rel="stylesheet" href="../../assets/site.7b775d97.css">
+<script>(function(){var d=document.documentElement;d.classList.add('js');if(location.protocol==='file:'){document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a||a.target==='_blank')return;var h=a.getAttribute('href');if(!h||/^([a-z]+:|\/\/|#)/i.test(h))return;var m=h.match(/^([^?#]*)(.*)$/);if(m[1]===''||m[1].slice(-1)==='/'){e.preventDefault();location.href=(m[1]||'./')+'index.html'+m[2];}},true);}})();</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"染舟","alternateName":["RANZHOU","染舟机器人"]}</script>
+
+</head>
+<body>
+
+<a class="skip-link" href="#main">跳到正文</a>
+
+<header class="site-header" data-header data-variant="overlay">
+  <div class="site-header__inner">
+    <a class="site-logo" href="../../" aria-label="染舟首页"><svg class="logo logo--lockup-horizontal" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1544 274.02" fill="currentColor"><path transform="translate(-697.82 -533.41) scale(1)" d="M698.54 533.41L971.83 807.43L873.77 807.43L698.54 630.76L698.54 533.41ZM697.82 580.9L765.6 688.69L765.6 806.7L697.82 806.7L697.82 580.9ZM904.05 703.13C942.79 694.85 971.83 660.43 971.83 619.22C971.83 571.83 933.42 533.41 886.02 533.41L698.54 533.41L698.54 616.35L748.3 663.99L748.3 600.47L904.05 600.47L904.05 703.13Z"/><path transform="translate(-9.99 -993.16) scale(1.17)" d="M454.66 1008.37L417.21 1008.37L397.07 984.44L354.08 984.44L354.08 1008.37L326.1 1008.37L326.1 962.14L404.78 962.14C409.1 962.14 412.75 961.24 415.73 959.43C418.7 957.63 420.19 955.15 420.19 952C420.19 948.48 418.83 945.85 416.13 944.09C413.43 942.33 409.64 941.45 404.78 941.45L326.1 941.45L344.35 917.93L402.48 917.93C407.61 917.93 412.93 918.41 418.43 919.35C423.93 920.3 428.93 921.99 433.43 924.42C437.94 926.85 441.66 930.14 444.59 934.29C447.52 938.44 448.98 943.75 448.98 950.24C448.98 953.76 448.44 957.09 447.36 960.24C446.28 963.4 444.72 966.24 442.69 968.76C440.67 971.28 438.19 973.42 435.26 975.18C432.33 976.94 429.02 978.18 425.32 978.9C426.86 980.07 428.57 981.56 430.46 983.36C432.35 985.16 434.88 987.64 438.03 990.8L454.66 1008.37ZM514.42 1008.37L531.32 985.12L554.03 985.12L562.48 985.12C565.41 985.12 567.95 985.21 570.12 985.39C568.85 983.77 567.39 981.72 565.72 979.24C564.05 976.76 562.46 974.44 560.92 972.28L544.7 948.35L502.26 1008.37L469.14 1008.37L527.13 926.58C529.02 923.97 531.41 921.63 534.29 919.56C537.18 917.48 540.83 916.45 545.24 916.45C549.48 916.45 553.02 917.41 555.85 919.35C558.69 921.29 561.1 923.7 563.09 926.58L619.59 1008.37L514.42 1008.37ZM732.23 1009.86C730.42 1009.86 728.64 1009.56 726.89 1008.98C725.13 1008.39 723.17 1007.06 721.01 1004.99L665.58 955.24L665.58 1008.37L640.17 1008.37L640.17 933.34C640.17 930.37 640.6 927.8 641.45 925.64C642.31 923.48 643.43 921.72 644.83 920.37C646.23 919.01 647.85 918.02 649.7 917.39C651.55 916.76 653.46 916.45 655.44 916.45C657.16 916.45 658.89 916.74 660.65 917.32C662.4 917.91 664.41 919.24 666.66 921.31L722.09 971.06L722.09 917.93L747.64 917.93L747.64 992.82C747.64 995.8 747.21 998.37 746.35 1000.53C745.5 1002.69 744.37 1004.47 742.97 1005.87C741.58 1007.26 739.93 1008.28 738.04 1008.91C736.15 1009.54 734.21 1009.86 732.23 1009.86ZM870.78 1008.37L785.08 1008.37C781.57 1008.37 778.52 1007.4 775.96 1005.46C773.39 1003.52 772.1 1000.71 772.1 997.01C772.1 994.94 772.64 992.94 773.73 991C774.81 989.06 776.29 987.33 778.19 985.79L811.17 959.84L820.9 952.2C823.61 950.08 825.95 948.28 827.93 946.79C829.92 945.31 831.56 944.11 832.87 943.21C834.17 942.31 835.23 941.54 836.04 940.91C834.78 941 833.32 941.09 831.65 941.18C829.98 941.27 827.91 941.34 825.43 941.39C822.95 941.43 820.05 941.45 816.71 941.45L804.95 941.45L768.72 941.45L786.57 917.93L869.97 917.93C873.49 917.93 876.53 918.9 879.1 920.84C881.67 922.78 882.95 925.59 882.95 929.29C882.95 931.36 882.41 933.37 881.33 935.3C880.25 937.24 878.76 938.93 876.87 940.37L843.48 966.87C839.78 969.84 836.58 972.37 833.88 974.44L826.92 979.78C824.98 981.26 823.38 982.46 822.12 983.36C820.86 984.26 819.78 985.03 818.88 985.66C819.96 985.57 821.78 985.5 824.35 985.46L833.2 985.32L843.88 985.19C847.67 985.14 851.32 985.12 854.83 985.12L887.68 985.12L870.78 1008.37ZM1020.7 1008.37L992.85 1008.37L992.85 973.49L939.05 973.49L939.05 1008.37L910.93 1008.37L910.93 917.93L939.05 917.93L939.05 949.97L992.85 949.97L992.85 917.93L1020.7 917.93L1020.7 1008.37ZM1113.03 986.33C1120.06 986.33 1126.01 986.04 1130.87 985.46C1135.74 984.87 1139.68 983.72 1142.7 982.01C1145.72 980.3 1147.91 977.93 1149.26 974.91C1150.61 971.89 1151.29 967.95 1151.29 963.08C1151.29 958.22 1150.61 954.27 1149.26 951.25C1147.91 948.24 1145.72 945.89 1142.7 944.23C1139.68 942.56 1135.74 941.43 1130.87 940.85C1126.01 940.26 1120.06 939.97 1113.03 939.97C1106 939.97 1100.05 940.26 1095.19 940.85C1090.32 941.43 1086.38 942.56 1083.36 944.23C1080.34 945.89 1078.15 948.24 1076.8 951.25C1075.45 954.27 1074.77 958.22 1074.77 963.08C1074.77 967.95 1075.45 971.89 1076.8 974.91C1078.15 977.93 1080.34 980.3 1083.36 982.01C1086.38 983.72 1090.32 984.87 1095.19 985.46C1100.05 986.04 1106 986.33 1113.03 986.33ZM1113.03 916.45C1135.02 916.45 1151.53 920.19 1162.57 927.67C1173.61 935.15 1179.13 946.95 1179.13 963.08C1179.13 979.3 1173.64 991.16 1162.64 998.64C1151.65 1006.12 1135.11 1009.86 1113.03 1009.86C1090.86 1009.86 1074.3 1006.12 1063.35 998.64C1052.4 991.16 1046.93 979.3 1046.93 963.08C1046.93 946.95 1052.42 935.15 1063.42 927.67C1074.41 920.19 1090.95 916.45 1113.03 916.45ZM1324.34 968.9C1324.34 996.2 1305.55 1009.86 1267.97 1009.86C1257.06 1009.86 1247.69 1009 1239.85 1007.29C1232.01 1005.57 1225.54 1003.01 1220.45 999.58C1215.36 996.16 1211.62 991.9 1209.23 986.81C1206.84 981.72 1205.65 975.75 1205.65 968.9L1205.65 917.93L1233.5 917.93L1233.5 968.9C1233.5 972.23 1233.95 975.02 1234.85 977.28C1235.75 979.53 1237.44 981.35 1239.92 982.75C1242.4 984.15 1245.89 985.14 1250.4 985.73C1254.9 986.31 1260.76 986.6 1267.97 986.6C1273.38 986.6 1277.88 986.29 1281.49 985.66C1285.09 985.03 1287.98 983.99 1290.14 982.55C1292.3 981.11 1293.86 979.26 1294.8 977.01C1295.75 974.75 1296.22 972.05 1296.22 968.9L1296.22 917.93L1324.34 917.93L1324.34 968.9Z"/></svg></a>
+    <nav class="site-nav" aria-label="主导航"><ul class="site-nav__list"><li class="site-nav__item has-menu">
+        <a class="site-nav__link" href="../" aria-current="page">产品<span class="site-nav__caret"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9.5 6 6 6-6"/></svg></span></a>
+        <div class="nav-menu">
+          <div class="nav-menu__inner" style="--cols:3">
+            <a class="nav-menu__card" href="../rz-titan/">
+                <span class="nav-menu__num">01</span>
+                <span class="nav-menu__name" lang="en">RZ Titan</span>
+                <span class="nav-menu__cat">船舱内壁全自主智能喷涂机器人</span>
+                
+              </a><a class="nav-menu__card" href="../rz-spider/">
+                <span class="nav-menu__num">02</span>
+                <span class="nav-menu__name" lang="en">RZ Spider</span>
+                <span class="nav-menu__cat">船舶舱内多足磁吸作业机器人</span>
+                
+              </a><a class="nav-menu__card" href="./">
+                <span class="nav-menu__num">03</span>
+                <span class="nav-menu__name" lang="en">RZ Radar</span>
+                <span class="nav-menu__cat">舱内测绘导航站</span>
+                
+              </a>
+            <a class="nav-menu__all" href="../">全部产品 <svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </li><li class="site-nav__item"><a class="site-nav__link" href="../../technology/">技术</a></li><li class="site-nav__item"><a class="site-nav__link" href="../../company/">关于</a></li><li class="site-nav__item"><a class="site-nav__link" href="../../resources/">资源</a></li><li class="site-nav__item"><a class="site-nav__link" href="../../contact/">联系我们</a></li></ul></nav>
+    <div class="site-header__tools">
+      <a class="lang-switch" href="../../en/products/rz-radar/" hreflang="en" lang="en" aria-label="切换语言: English">
+    <svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.4 2.3 3.6 5.1 3.6 8.5s-1.2 6.2-3.6 8.5c-2.4-2.3-3.6-5.1-3.6-8.5S9.6 5.8 12 3.5z"/></svg><span class="lang-switch__opt is-current">中</span><span class="lang-switch__sep">/</span><span class="lang-switch__opt">EN</span>
+  </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+        <span class="menu-toggle__bars" aria-hidden="true"><span></span><span></span></span>
+        <span class="sr-only">菜单</span>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu" id="mobile-menu" data-mobile-menu hidden>
+  <nav class="mobile-menu__nav" aria-label="主导航">
+    <ul>
+      <li style="--i:0"><a href="../" aria-current="page">产品</a>
+          <ul class="mobile-menu__sub"><li><a href="../rz-titan/">RZ Titan</a></li><li><a href="../rz-spider/">RZ Spider</a></li><li><a href="./">RZ Radar</a></li></ul>
+        </li><li style="--i:1"><a href="../../technology/">技术</a>
+          
+        </li><li style="--i:2"><a href="../../company/">关于</a>
+          
+        </li><li style="--i:3"><a href="../../resources/">资源</a>
+          
+        </li><li style="--i:4"><a href="../../contact/">联系我们</a>
+          
+        </li>
+    </ul>
+  </nav>
+  <div class="mobile-menu__foot">
+    <a class="lang-switch" href="../../en/products/rz-radar/" hreflang="en" lang="en" aria-label="切换语言: English">
+    <svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.4 2.3 3.6 5.1 3.6 8.5s-1.2 6.2-3.6 8.5c-2.4-2.3-3.6-5.1-3.6-8.5S9.6 5.8 12 3.5z"/></svg><span class="lang-switch__opt is-current">中</span><span class="lang-switch__sep">/</span><span class="lang-switch__opt">EN</span>
+  </a>
+    <p class="mobile-menu__legal">染舟机器人</p>
+  </div>
+</div>
+<main id="main" class="page page-product page-rz-radar">
+
+<section class="hero hero--full hero--product" data-hero>
+    <div class="hero__bg"><img src="../../media/rz-radar/dark.webp" srcset="../../media/rz-radar/dark-960.webp 960w, ../../media/rz-radar/dark.webp 1920w" sizes="100vw" alt="" width="1920" height="1080" class="hero__img is-kenburns" loading="eager" decoding="async" fetchpriority="high"></div>
+    <div class="hero__shade hero__shade--bottom"></div>
+    <div class="container hero__content">
+      <p class="eyebrow eyebrow--light">产品 03</p>
+      <h1 class="hero__title t-display-xl" lang="en">RZ Radar</h1>
+      <p class="hero__body">舱内测绘导航站<br>先看清船舱，再让机器人进场</p>
+      <div class="hero__actions">
+    
+    <a class="btn btn--ghost-light" href="../../contact/">预约演示<svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></svg></a></div>
+    </div>
+  </section>
+
+<nav class="subnav" aria-label="RZ Radar" data-subnav>
+  <div class="container subnav__inner">
+    <span class="subnav__name" lang="en">RZ Radar</span>
+    <ul class="subnav__links">
+      <li><a href="#overview">产品定位</a></li>
+      
+      <li><a href="#features">技术</a></li>
+      
+      <li><a href="#design">工业设计</a></li>
+      <li><a href="#specs">技术参数</a></li>
+      <li><a href="#downloads">产品手册</a></li>
+    </ul>
+    <a class="btn btn--dark btn--xs" href="../../contact/">预约演示</a>
+  </div>
+</nav>
+
+<section class="section s-light" id="overview">
+      <div class="container">
+        <div class="section-head" data-reveal>
+    <div class="section-head__main">
+      <p class="eyebrow">产品定位</p>
+      <h2 class="section-head__title t-h2">测绘、规划、导航，<br>一台设备完成。</h2>
+    </div>
+    <p class="section-head__body t-lead">RZ Radar 在喷涂前进入船舱：三腿展开、升杆扫描，生成与船体 CAD 配准的三维模型和喷涂路径。喷涂开始后它留在舱内，作为 RZ Titan 与 RZ Spider 的定位基站。</p>
+    
+  </div>
+        <div class="units" data-reveal-group>
+          <div class="units__media" data-reveal><img src="../../media/rz-radar/exploded.webp" srcset="../../media/rz-radar/exploded-960.webp 960w, ../../media/rz-radar/exploded.webp 1920w" sizes="(min-width: 900px) 55vw, 100vw" alt="RZ Radar" width="1920" height="1080" loading="lazy" decoding="async"></div>
+          <ul class="units__list">
+            <li class="units__item" data-reveal><h3 class="units__title">激光扫描头</h3><p class="units__body">高速旋转的激光镜鼓，360° × 300° 扫描视场；护架兼作提手。</p></li><li class="units__item" data-reveal><h3 class="units__title">4D 毫米波雷达环 + 4 × HDR 相机</h3><p class="units__body">雷达穿透漆雾跟踪机器人与人员，相机为点云着色。</p></li><li class="units__item" data-reveal><h3 class="units__title">两级伸缩桅杆</h3><p class="units__body">行程 400 mm，扫描中心最高 1,382 mm。</p></li><li class="units__item" data-reveal><h3 class="units__title">主机舱</h3><p class="units__body">Jetson AGX Orin 算力，2 × 98 Wh 热插拔电池，温湿度、露点与 LEL 传感器。</p></li><li class="units__item" data-reveal><h3 class="units__title">自调平着陆腿 × 3</h3><p class="units__body">碳纤维腿电动展开、下段伸缩，±12° 调平；开关式永磁脚垫吸附舱底钢板。</p></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+<section class="section section--tight s-dark"><div class="container"><div class="figures figures--big figures--compact" data-reveal-group>
+    <p class="eyebrow figures__eyebrow">设计目标</p>
+    <dl class="figures__list">
+      <div class="figures__item" data-reveal>
+          <dt class="figures__label">收纳高度（Ø256 mm）</dt>
+          <dd class="figures__value"><span class="figures__num" data-count>842</span><span class="figures__unit">mm</span></dd>
+          
+        </div><div class="figures__item" data-reveal>
+          <dt class="figures__label">最大展开高度</dt>
+          <dd class="figures__value"><span class="figures__num" data-count>1,492</span><span class="figures__unit">mm</span></dd>
+          
+        </div><div class="figures__item" data-reveal>
+          <dt class="figures__label">激光扫描视场</dt>
+          <dd class="figures__value"><span class="figures__num" data-count>360°</span></dd>
+          <dd class="figures__note">垂直 300°</dd>
+        </div><div class="figures__item" data-reveal>
+          <dt class="figures__label">整机重量</dt>
+          <dd class="figures__value"><span class="figures__num" data-count>≈ 14</span><span class="figures__unit">kg</span></dd>
+          
+        </div>
+    </dl>
+  </div></div></section>
+
+
+
+<section class="section s-light features" id="features">
+      <div class="container features__list">
+        <div class="feature feature--light" id="deploy" data-reveal>
+    <div class="feature__media is-video"><video poster="../../media/rz-radar/deploy-poster.webp" muted loop playsinline webkit-playsinline preload="none" data-autoplay="" data-lazy="" aria-label="RZ Radar 展开、升杆与扫描动作演示" tabindex="-1" disablepictureinpicture><source data-src="../../media/rz-radar/deploy.mp4" type="video/mp4"></video></div>
+    <div class="feature__text">
+      <p class="eyebrow">进舱展开</p>
+      <h3 class="feature__title t-h3">一人搬运，<br>进舱即展开</h3>
+      <p class="feature__body">收纳后高 842 mm、直径 256 mm，约 14 kg，一人即可携带穿过 600 × 800 mm 人孔。到位后三腿摆出着陆、自调平，磁吸脚垫锁定，两级桅杆依次升起，扫描中心最高到 1,382 mm。</p>
+      <ul class="points"><li>收纳 842 × Ø256 mm</li><li>整机约 14 kg</li><li>展开高度 1,092–⁠1,492 mm</li></ul>
+      
+    </div>
+  </div><div class="feature feature--reverse feature--light" id="scan" data-reveal>
+    <div class="feature__media"><img src="../../media/rz-radar/head.webp" srcset="../../media/rz-radar/head-960.webp 960w, ../../media/rz-radar/head.webp 1920w" sizes="(min-width: 900px) 55vw, 100vw" alt="RZ Radar 扫描头：镜鼓、雷达环与相机" width="1920" height="1080" loading="lazy" decoding="async"></div>
+    <div class="feature__text">
+      <p class="eyebrow">扫描建模</p>
+      <h3 class="feature__title t-h3">激光、雷达与相机，<br>看清舱内每一处结构</h3>
+      <p class="feature__body">激光镜鼓提供 360° × 300° 扫描视场，4 台 HDR 相机为点云全景着色，多站扫描自动拼接，生成完整的舱室三维模型。</p>
+      
+      
+    </div>
+  </div><div class="feature feature--light" id="registration" data-reveal>
+    <div class="feature__media"><img src="../../media/rz-radar/scan.webp" srcset="../../media/rz-radar/scan-960.webp 960w, ../../media/rz-radar/scan.webp 1920w" sizes="(min-width: 900px) 55vw, 100vw" alt="舱内扫描：激光扫描线与实时点云" width="1920" height="1080" loading="lazy" decoding="async"></div>
+    <div class="feature__text">
+      <p class="eyebrow">配准与规划</p>
+      <h3 class="feature__title t-h3">与船体 CAD 配准，<br>直接生成喷涂路径</h3>
+      <p class="feature__body">点云与船体 CAD 配准后，系统输出建造偏差、待喷涂面积、喷涂路径与导航地图，交给 RZ Titan 与 RZ Spider 执行。</p>
+      <ul class="points"><li>建造偏差</li><li>喷涂面积与路径</li><li>导航地图</li></ul>
+      
+    </div>
+  </div><div class="feature feature--reverse feature--light" id="navigation" data-reveal>
+    <div class="feature__media"><img src="../../media/rz-radar/hold.webp" srcset="../../media/rz-radar/hold-960.webp 960w, ../../media/rz-radar/hold.webp 1920w" sizes="(min-width: 900px) 55vw, 100vw" alt="RZ Radar 在双层底舱段中工作" width="1920" height="1080" loading="lazy" decoding="async"></div>
+    <div class="feature__text">
+      <p class="eyebrow">导航基站</p>
+      <h3 class="feature__title t-h3">喷涂时留在舱内，<br>为机器人导航</h3>
+      <p class="feature__body">4D 毫米波雷达可穿透漆雾，持续跟踪舱内的机器人与人员；UWB 提供定位，Wi-Fi Mesh 经人孔中继通信。同时监测温湿度、露点、钢板温度与可燃气体浓度（LEL），为涂装质量记录提供环境数据。</p>
+      <ul class="points"><li>穿透漆雾跟踪</li><li>UWB 定位 · Wi-Fi Mesh</li><li>温湿度 · 露点 · LEL</li></ul>
+      
+    </div>
+  </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+<section class="section s-black" id="design">
+      <div class="container">
+        <div class="section-head section-head--light" data-reveal>
+    <div class="section-head__main">
+      <p class="eyebrow">工业设计</p>
+      <h2 class="section-head__title t-h2">白、黑与不锈钢，<br>青色灯带延续 RZ Titan</h2>
+    </div>
+    
+    
+  </div>
+      </div>
+      <div class="gallery" data-gallery>
+    <div class="gallery__track" data-gallery-track tabindex="0">
+      <figure class="gallery__item">
+          <img src="../../media/rz-radar/studio.webp" srcset="../../media/rz-radar/studio-960.webp 960w, ../../media/rz-radar/studio.webp 1920w" sizes="(min-width: 900px) 60vw, 85vw" alt="亮场" width="1920" height="1080" loading="lazy" decoding="async">
+          <figcaption>亮场</figcaption>
+        </figure><figure class="gallery__item">
+          <img src="../../media/rz-radar/sequence.webp" srcset="../../media/rz-radar/sequence-960.webp 960w, ../../media/rz-radar/sequence.webp 1920w" sizes="(min-width: 900px) 60vw, 85vw" alt="收纳 → 展开 → 升杆扫描" width="1920" height="1080" loading="lazy" decoding="async">
+          <figcaption>收纳 → 展开 → 升杆扫描</figcaption>
+        </figure><figure class="gallery__item">
+          <img src="../../media/rz-radar/legs.webp" srcset="../../media/rz-radar/legs-960.webp 960w, ../../media/rz-radar/legs.webp 1920w" sizes="(min-width: 900px) 60vw, 85vw" alt="碳纤维着陆腿与磁吸脚垫" width="1920" height="1080" loading="lazy" decoding="async">
+          <figcaption>碳纤维着陆腿与磁吸脚垫</figcaption>
+        </figure><figure class="gallery__item">
+          <img src="../../media/rz-radar/rear.webp" srcset="../../media/rz-radar/rear-960.webp 960w, ../../media/rz-radar/rear.webp 1920w" sizes="(min-width: 900px) 60vw, 85vw" alt="背面：电池仓、接口与激光等级标签" width="1920" height="1080" loading="lazy" decoding="async">
+          <figcaption>背面：电池仓、接口与激光等级标签</figcaption>
+        </figure><figure class="gallery__item">
+          <img src="../../media/rz-radar/dimensions.webp" srcset="../../media/rz-radar/dimensions-960.webp 960w, ../../media/rz-radar/dimensions.webp 1920w" sizes="(min-width: 900px) 60vw, 85vw" alt="外形尺寸（设计目标）" width="1920" height="1080" loading="lazy" decoding="async">
+          <figcaption>外形尺寸（设计目标）</figcaption>
+        </figure>
+    </div>
+    <div class="gallery__controls">
+      <button type="button" class="icon-btn icon-btn--light" data-gallery-prev><svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m14.5 6-6 6 6 6"/></svg><span class="sr-only">上一个</span></button>
+      <button type="button" class="icon-btn icon-btn--light" data-gallery-next><svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9.5 6 6 6-6 6"/></svg><span class="sr-only">下一个</span></button>
+    </div>
+  </div>
+    </section>
+
+<section class="section s-light" id="specs">
+      <div class="container split">
+        <div class="split__head">
+          <div class="section-head section-head--stack" data-reveal>
+    <div class="section-head__main">
+      <p class="eyebrow">技术参数</p>
+      <h2 class="section-head__title t-h2" lang="en">RZ Radar</h2>
+    </div>
+    
+    
+  </div>
+          
+        </div>
+        <div class="specs" data-reveal-group>
+    <div class="specs__group" data-reveal>
+        <h3 class="specs__group-title">尺寸与重量</h3>
+        <dl class="specs__list">
+          <div class="specs__row"><dt>收纳尺寸</dt><dd>842 × Ø256 mm</dd></div><div class="specs__row"><dt>展开高度</dt><dd>1,092 mm（桅杆收）– 1,492 mm（桅杆升）</dd></div><div class="specs__row"><dt>扫描中心高度</dt><dd>1,382 mm</dd></div><div class="specs__row"><dt>支撑圆 / 离地</dt><dd>Ø1,168 mm / 250 mm</dd></div><div class="specs__row"><dt>整机重量</dt><dd>≈ 14 kg</dd></div>
+        </dl>
+      </div><div class="specs__group" data-reveal>
+        <h3 class="specs__group-title">感知</h3>
+        <dl class="specs__list">
+          <div class="specs__row"><dt>激光扫描</dt><dd>360° × 300°</dd></div><div class="specs__row"><dt>毫米波雷达</dt><dd>4D × 4，360° 覆盖</dd></div><div class="specs__row"><dt>相机</dt><dd>4 × HDR</dd></div><div class="specs__row"><dt>环境监测</dt><dd>温湿度 · 露点 · 钢板温度 · LEL</dd></div>
+        </dl>
+      </div><div class="specs__group" data-reveal>
+        <h3 class="specs__group-title">系统</h3>
+        <dl class="specs__list">
+          <div class="specs__row"><dt>算力</dt><dd>NVIDIA Jetson AGX Orin</dd></div><div class="specs__row"><dt>定位与通信</dt><dd>UWB 定位 · Wi-Fi Mesh 经人孔中继</dd></div><div class="specs__row"><dt>电源</dt><dd>2 × 98 Wh 热插拔电池</dd></div><div class="specs__row"><dt>防护</dt><dd>IP65 · 防爆目标 Ex ib IIB T4</dd></div>
+        </dl>
+      </div>
+    <p class="specs__note">以上为设计目标，以工程样机为准。</p>
+  </div>
+      </div>
+    </section>
+
+<section class="section s-gray" id="downloads">
+      <div class="container split">
+        <div class="split__head">
+          <div class="section-head section-head--stack" data-reveal>
+    <div class="section-head__main">
+      <p class="eyebrow">产品手册</p>
+      <h2 class="section-head__title t-h2">资料下载</h2>
+    </div>
+    
+    
+  </div>
+        </div>
+        <ul class="downloads" data-reveal-group>
+    <li class="downloads__item" data-reveal>
+        <span class="downloads__icon"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3.5h7l4 4v13h-11z"/><path d="M13.5 3.5v4h4M9 12.5h6M9 16h6"/></svg></span>
+        <span class="downloads__text"><span class="downloads__title">RZ Radar 外形尺寸图</span><span class="downloads__meta">PNG · 187 KB</span></span>
+        <a class="downloads__action" href="../../downloads/rz-radar-dimensions.png" download>下载<svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10.5l5 5 5-5M5 19.5h14"/></svg></a>
+      </li><li class="downloads__item is-soon" data-reveal>
+        <span class="downloads__icon"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 3.5h7l4 4v13h-11z"/><path d="M13.5 3.5v4h4M9 12.5h6M9 16h6"/></svg></span>
+        <span class="downloads__text"><span class="downloads__title">RZ Radar 产品手册</span><span class="downloads__meta">PDF</span></span>
+        <span class="downloads__action is-disabled" title="文件整理中，发布后可在此下载。">即将发布</span>
+      </li>
+  </ul>
+      </div>
+    </section>
+
+<section class="section s-light">
+      <div class="container">
+        <div class="section-head" data-reveal>
+    <div class="section-head__main">
+      <p class="eyebrow">合作模式</p>
+      <h2 class="section-head__title t-h2">按您的方式，<br>引入自主涂装</h2>
+    </div>
+    
+    
+  </div>
+        <div class="values values--3 values--plain" data-reveal-group>
+    <div class="values__item" data-reveal>
+        
+        
+        <h3 class="values__title">整机销售</h3>
+        <p class="values__body">采购整机，纳入自有涂装作业体系。</p>
+      </div><div class="values__item" data-reveal>
+        
+        
+        <h3 class="values__title">租赁外包</h3>
+        <p class="values__body">按项目租赁设备或委托施工，降低前期投入。</p>
+      </div><div class="values__item" data-reveal>
+        
+        
+        <h3 class="values__title">技术服务</h3>
+        <p class="values__body">提供部署、培训与维护等技术支持。</p>
+      </div>
+  </div>
+      </div>
+    </section>
+
+<a class="next-product s-dark" href="../rz-titan/">
+    <div class="container next-product__inner">
+      <span class="eyebrow eyebrow--light">下一款产品</span>
+      <span class="next-product__name" lang="en">RZ Titan</span>
+      <span class="next-product__cat">船舱内壁全自主智能喷涂机器人</span>
+      <span class="next-product__arrow"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></svg></span>
+    </div>
+  </a>
+</main>
+
+<footer class="site-footer" data-reveal-group>
+  <div class="container footer-cta">
+    <p class="footer-cta__statement t-display">以自主涂装，<br>推动造船业升级。</p>
+    <div class="footer-cta__side">
+      <p class="footer-cta__title">让染舟机器人<br>进入您的船坞。</p>
+      <a class="btn btn--light" href="../../contact/">联系我们<svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12h15M13.5 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+  <div class="footer-graphic" aria-hidden="true">
+    <svg class="fg-svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false" fill="none" stroke="currentColor"><path class="fg-rails" d="M600 230L50 20M600 230L1150 20M600 230L50 440M600 230L1150 440"/><path class="fg-floor" d="M600 230L50 440M600 230L160 440M600 230L270 440M600 230L380 440M600 230L490 440M600 230L600 440M600 230L710 440M600 230L820 440M600 230L930 440M600 230L1040 440M600 230L1150 440"/><g class="fg-frame" style="--k:0"><rect x="50" y="20" width="1100" height="420" rx="2"/><rect x="440" y="168" width="320" height="176" rx="88"/><path d="M50 405h1100"/></g><g class="fg-frame" style="--k:1"><rect x="50" y="20" width="1100" height="420" rx="2"/><rect x="440" y="168" width="320" height="176" rx="88"/><path d="M50 405h1100"/></g><g class="fg-frame" style="--k:2"><rect x="50" y="20" width="1100" height="420" rx="2"/><rect x="440" y="168" width="320" height="176" rx="88"/><path d="M50 405h1100"/></g><g class="fg-frame" style="--k:3"><rect x="50" y="20" width="1100" height="420" rx="2"/><rect x="440" y="168" width="320" height="176" rx="88"/><path d="M50 405h1100"/></g><g class="fg-frame" style="--k:4"><rect x="50" y="20" width="1100" height="420" rx="2"/><rect x="440" y="168" width="320" height="176" rx="88"/><path d="M50 405h1100"/></g><g class="fg-frame" style="--k:5"><rect x="50" y="20" width="1100" height="420" rx="2"/><rect x="440" y="168" width="320" height="176" rx="88"/><path d="M50 405h1100"/></g></svg>
+    <div class="fg-mark"><svg class="logo logo--mark" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 274.01 274.02" fill="currentColor"><path transform="translate(-697.82 -533.41) scale(1)" d="M698.54 533.41L971.83 807.43L873.77 807.43L698.54 630.76L698.54 533.41ZM697.82 580.9L765.6 688.69L765.6 806.7L697.82 806.7L697.82 580.9ZM904.05 703.13C942.79 694.85 971.83 660.43 971.83 619.22C971.83 571.83 933.42 533.41 886.02 533.41L698.54 533.41L698.54 616.35L748.3 663.99L748.3 600.47L904.05 600.47L904.05 703.13Z"/></svg></div>
+    <span class="fg-chip" style="left:14%;top:24%;--i:0"><span class="fg-chip__box"></span>扫描建模</span><span class="fg-chip" style="left:70%;top:30%;--i:1"><span class="fg-chip__box"></span>肋板跨越</span><span class="fg-chip" style="left:20%;top:70%;--i:2"><span class="fg-chip__box"></span>磁吸爬壁</span><span class="fg-chip" style="left:68%;top:74%;--i:3"><span class="fg-chip__box"></span>全域喷涂</span>
+  </div>
+  <div class="container footer-links">
+    <a class="footer-brand" href="../../" aria-label="染舟首页"><svg class="logo logo--lockup-horizontal-cn" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1368.3 274.02" fill="currentColor"><path transform="translate(-697.82 -533.41) scale(1)" d="M698.54 533.41L971.83 807.43L873.77 807.43L698.54 630.76L698.54 533.41ZM697.82 580.9L765.6 688.69L765.6 806.7L697.82 806.7L697.82 580.9ZM904.05 703.13C942.79 694.85 971.83 660.43 971.83 619.22C971.83 571.83 933.42 533.41 886.02 533.41L698.54 533.41L698.54 616.35L748.3 663.99L748.3 600.47L904.05 600.47L904.05 703.13Z"/><path transform="translate(47.41 -892.14) scale(1)" d="M454.66 1008.37L417.21 1008.37L397.07 984.44L354.08 984.44L354.08 1008.37L326.1 1008.37L326.1 962.14L404.78 962.14C409.1 962.14 412.75 961.24 415.73 959.43C418.7 957.63 420.19 955.15 420.19 952C420.19 948.48 418.83 945.85 416.13 944.09C413.43 942.33 409.64 941.45 404.78 941.45L326.1 941.45L344.35 917.93L402.48 917.93C407.61 917.93 412.93 918.41 418.43 919.35C423.93 920.3 428.93 921.99 433.43 924.42C437.94 926.85 441.66 930.14 444.59 934.29C447.52 938.44 448.98 943.75 448.98 950.24C448.98 953.76 448.44 957.09 447.36 960.24C446.28 963.4 444.72 966.24 442.69 968.76C440.67 971.28 438.19 973.42 435.26 975.18C432.33 976.94 429.02 978.18 425.32 978.9C426.86 980.07 428.57 981.56 430.46 983.36C432.35 985.16 434.88 987.64 438.03 990.8L454.66 1008.37ZM514.42 1008.37L531.32 985.12L554.03 985.12L562.48 985.12C565.41 985.12 567.95 985.21 570.12 985.39C568.85 983.77 567.39 981.72 565.72 979.24C564.05 976.76 562.46 974.44 560.92 972.28L544.7 948.35L502.26 1008.37L469.14 1008.37L527.13 926.58C529.02 923.97 531.41 921.63 534.29 919.56C537.18 917.48 540.83 916.45 545.24 916.45C549.48 916.45 553.02 917.41 555.85 919.35C558.69 921.29 561.1 923.7 563.09 926.58L619.59 1008.37L514.42 1008.37ZM732.23 1009.86C730.42 1009.86 728.64 1009.56 726.89 1008.98C725.13 1008.39 723.17 1007.06 721.01 1004.99L665.58 955.24L665.58 1008.37L640.17 1008.37L640.17 933.34C640.17 930.37 640.6 927.8 641.45 925.64C642.31 923.48 643.43 921.72 644.83 920.37C646.23 919.01 647.85 918.02 649.7 917.39C651.55 916.76 653.46 916.45 655.44 916.45C657.16 916.45 658.89 916.74 660.65 917.32C662.4 917.91 664.41 919.24 666.66 921.31L722.09 971.06L722.09 917.93L747.64 917.93L747.64 992.82C747.64 995.8 747.21 998.37 746.35 1000.53C745.5 1002.69 744.37 1004.47 742.97 1005.87C741.58 1007.26 739.93 1008.28 738.04 1008.91C736.15 1009.54 734.21 1009.86 732.23 1009.86ZM870.78 1008.37L785.08 1008.37C781.57 1008.37 778.52 1007.4 775.96 1005.46C773.39 1003.52 772.1 1000.71 772.1 997.01C772.1 994.94 772.64 992.94 773.73 991C774.81 989.06 776.29 987.33 778.19 985.79L811.17 959.84L820.9 952.2C823.61 950.08 825.95 948.28 827.93 946.79C829.92 945.31 831.56 944.11 832.87 943.21C834.17 942.31 835.23 941.54 836.04 940.91C834.78 941 833.32 941.09 831.65 941.18C829.98 941.27 827.91 941.34 825.43 941.39C822.95 941.43 820.05 941.45 816.71 941.45L804.95 941.45L768.72 941.45L786.57 917.93L869.97 917.93C873.49 917.93 876.53 918.9 879.1 920.84C881.67 922.78 882.95 925.59 882.95 929.29C882.95 931.36 882.41 933.37 881.33 935.3C880.25 937.24 878.76 938.93 876.87 940.37L843.48 966.87C839.78 969.84 836.58 972.37 833.88 974.44L826.92 979.78C824.98 981.26 823.38 982.46 822.12 983.36C820.86 984.26 819.78 985.03 818.88 985.66C819.96 985.57 821.78 985.5 824.35 985.46L833.2 985.32L843.88 985.19C847.67 985.14 851.32 985.12 854.83 985.12L887.68 985.12L870.78 1008.37ZM1020.7 1008.37L992.85 1008.37L992.85 973.49L939.05 973.49L939.05 1008.37L910.93 1008.37L910.93 917.93L939.05 917.93L939.05 949.97L992.85 949.97L992.85 917.93L1020.7 917.93L1020.7 1008.37ZM1113.03 986.33C1120.06 986.33 1126.01 986.04 1130.87 985.46C1135.74 984.87 1139.68 983.72 1142.7 982.01C1145.72 980.3 1147.91 977.93 1149.26 974.91C1150.61 971.89 1151.29 967.95 1151.29 963.08C1151.29 958.22 1150.61 954.27 1149.26 951.25C1147.91 948.24 1145.72 945.89 1142.7 944.23C1139.68 942.56 1135.74 941.43 1130.87 940.85C1126.01 940.26 1120.06 939.97 1113.03 939.97C1106 939.97 1100.05 940.26 1095.19 940.85C1090.32 941.43 1086.38 942.56 1083.36 944.23C1080.34 945.89 1078.15 948.24 1076.8 951.25C1075.45 954.27 1074.77 958.22 1074.77 963.08C1074.77 967.95 1075.45 971.89 1076.8 974.91C1078.15 977.93 1080.34 980.3 1083.36 982.01C1086.38 983.72 1090.32 984.87 1095.19 985.46C1100.05 986.04 1106 986.33 1113.03 986.33ZM1113.03 916.45C1135.02 916.45 1151.53 920.19 1162.57 927.67C1173.61 935.15 1179.13 946.95 1179.13 963.08C1179.13 979.3 1173.64 991.16 1162.64 998.64C1151.65 1006.12 1135.11 1009.86 1113.03 1009.86C1090.86 1009.86 1074.3 1006.12 1063.35 998.64C1052.4 991.16 1046.93 979.3 1046.93 963.08C1046.93 946.95 1052.42 935.15 1063.42 927.67C1074.41 920.19 1090.95 916.45 1113.03 916.45ZM1324.34 968.9C1324.34 996.2 1305.55 1009.86 1267.97 1009.86C1257.06 1009.86 1247.69 1009 1239.85 1007.29C1232.01 1005.57 1225.54 1003.01 1220.45 999.58C1215.36 996.16 1211.62 991.9 1209.23 986.81C1206.84 981.72 1205.65 975.75 1205.65 968.9L1205.65 917.93L1233.5 917.93L1233.5 968.9C1233.5 972.23 1233.95 975.02 1234.85 977.28C1235.75 979.53 1237.44 981.35 1239.92 982.75C1242.4 984.15 1245.89 985.14 1250.4 985.73C1254.9 986.31 1260.76 986.6 1267.97 986.6C1273.38 986.6 1277.88 986.29 1281.49 985.66C1285.09 985.03 1287.98 983.99 1290.14 982.55C1292.3 981.11 1293.86 979.26 1294.8 977.01C1295.75 974.75 1296.22 972.05 1296.22 968.9L1296.22 917.93L1324.34 917.93L1324.34 968.9Z"/><path transform="translate(-424.15 -1091.17) scale(1.16)" d="M741.84 1142.92L752.52 1156.89L741.28 1156.89L730.6 1142.92L741.84 1142.92ZM699.73 1101.8L707.99 1109.44L696.99 1109.44L688.67 1101.8L699.73 1101.8ZM699.73 1111.05L707.99 1118.76L696.99 1118.76L688.67 1111.05L699.73 1111.05ZM696.99 1120.81L707.99 1120.81L699.73 1131.18L688.67 1131.18L696.99 1120.81ZM699.11 1142.92L710.53 1142.92L699.79 1156.89L688.42 1156.89L699.11 1142.92ZM686.25 1134.34L715.63 1134.34L715.63 1131.74L725.32 1131.74L725.32 1134.34L754.69 1134.34L752.46 1140.49L725.32 1140.49L725.32 1156.89L715.63 1156.89L715.63 1140.49L686.25 1140.49L686.25 1134.34ZM740.6 1129.81C739.31 1129.81 738.21 1129.36 737.3 1128.44C736.39 1127.53 735.94 1126.42 735.94 1125.09L735.94 1112.11L726.93 1112.11L726.93 1115.22L716.31 1130.37L705.69 1130.37L717.3 1113.85L717.3 1112.11L709.17 1112.11L709.17 1105.96L717.3 1105.96L717.3 1100.43L726.93 1100.43L726.93 1105.96L745.56 1105.96L745.56 1123.66L754.26 1123.66L752.02 1129.81L740.6 1129.81ZM800.18 1136.52L806.08 1148.07L796.45 1148.07L790.55 1136.52L800.18 1136.52ZM798.81 1113.66L804.71 1125.21L795.02 1125.21L789.12 1113.66L798.81 1113.66ZM813.65 1127.58L813.65 1110.81L781.11 1110.81L781.11 1127.58L813.65 1127.58ZM803.22 1150.74L813.65 1150.74L813.65 1133.72L781.11 1133.72L781.11 1141.36L777.26 1156.89L767.38 1156.89L771.23 1141.36L771.23 1133.72L763.41 1133.72L763.41 1127.58L771.23 1127.58L771.23 1104.72L788.31 1104.72L789.68 1100.25L799.31 1100.25L797.94 1104.72L823.53 1104.72L823.53 1127.58L831.73 1127.58L829.49 1133.72L823.53 1133.72L823.53 1152.17C823.53 1153.5 823.07 1154.61 822.16 1155.52C821.25 1156.44 820.16 1156.89 818.87 1156.89L805.46 1156.89L803.22 1150.74Z"/></svg></a>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <p class="footer-col__title">产品</p>
+        <ul>
+          <li><a href="../rz-titan/">RZ Titan</a></li><li><a href="../rz-spider/">RZ Spider</a></li><li><a href="./">RZ Radar</a></li>
+          <li><a href="../">全部产品</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">技术</p>
+        <ul><li><a href="../../technology/#mobility">轮腿越障</a></li><li><a href="../../technology/#climbing">磁吸爬壁</a></li><li><a href="../../technology/#spraying">喷涂执行</a></li><li><a href="../../technology/#perception">测绘与感知</a></li><li><a href="../../technology/#safety">本质安全</a></li></ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col__title">染舟</p>
+        <ul>
+          <li><a href="../../company/">关于我们</a></li>
+          <li><a href="../../resources/">资源</a></li>
+          <li><a href="../../contact/">联系我们</a></li>
+        </ul>
+      </div>
+      
+    </div>
+  </div>
+  <div class="container footer-legal">
+    <p>© 2026 染舟机器人 保留所有权利。</p>
+    
+    <a class="footer-legal__lang" href="../../en/products/rz-radar/" hreflang="en"><svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.4 2.3 3.6 5.1 3.6 8.5s-1.2 6.2-3.6 8.5c-2.4-2.3-3.6-5.1-3.6-8.5S9.6 5.8 12 3.5z"/></svg> English</a>
+  </div>
+</footer>
+
+<div class="film-dialog" data-film-dialog hidden role="dialog" aria-modal="true" aria-label="播放产品影片">
+  <div class="film-dialog__backdrop" data-film-close></div>
+  <div class="film-dialog__frame">
+    <video class="film-dialog__video" controls playsinline preload="none"></video>
+    <button class="film-dialog__close" type="button" data-film-close><svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6l12 12M18 6 6 18"/></svg><span class="sr-only">关闭</span></button>
+  </div>
+</div>
+<script src="../../assets/site.8e5f4028.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+# Cloudflare Workers：site/ 文件夹里不作为网站文件发布的文件（写法同 .gitignore）。
+# Mac 的 Finder 打开文件夹时会自动生成 .DS_Store；.nojekyll 只给 GitHub Pages 用。
+.DS_Store
+.nojekyll
