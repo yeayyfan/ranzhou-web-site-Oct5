@@ -554,9 +554,14 @@
       var text = Object.keys(data).filter(function (k) { return data[k]; }).map(function (k) {
         return (labels[k] || k) + ': ' + data[k];
       }).join('\n');
-      if (email) {
+      // Prefer email; otherwise the co-founders' WeChat IDs.
+      var wechat = form.getAttribute('data-wechat');
+      var to = email
+        ? '<strong>' + esc(email) + '</strong>'
+        : wechat && wechat.split(' / ').map(function (id) { return '<strong class="nowrap">' + esc(id) + '</strong>'; }).join(' / ');
+      if (to) {
         setStatus(
-          '<p>' + esc(form.getAttribute('data-msg-manual')) + ' <strong>' + esc(email) + '</strong></p>' +
+          '<p>' + esc(form.getAttribute(email ? 'data-msg-manual' : 'data-msg-manual-wechat')) + ' ' + to + '</p>' +
           '<pre>' + esc(text) + '</pre>' +
           '<button type="button" class="copy-btn" data-copy="' + esc(text) + '" data-copied-label="' + esc(form.getAttribute('data-copied-label')) + '"><span>' + esc(form.getAttribute('data-copy-label')) + '</span></button>'
         );
